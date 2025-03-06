@@ -4,7 +4,7 @@ import pandas as pd #pandas
 import os #operating system 
 from io import BytesIO #python modules
 
-st.set_page_config(page_title=="Data sweeper",layout="wide")
+st.set_page_config(page_title="Data sweeper", layout="wide")
 #css
 st.markdown(
     """
