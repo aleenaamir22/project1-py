@@ -44,6 +44,7 @@ if uploaded_files:
      #data cleaning
 st.subheader("Data cleaning operation")
 if st.checkbox(f"Clean data for {file.name}"):
+
     col1,col2=st.columns(2)
 
     with col1:
