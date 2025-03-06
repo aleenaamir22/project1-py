@@ -1,4 +1,4 @@
-#growth mindset project with python 
+ #growth mindset project with python 
 import streamlit as st #streamlit
 import pandas as pd #pandas
 import os #operating system 
@@ -23,7 +23,7 @@ st.title("Datasweeper sterling Integrator by Aleena Amir")
 st.write("transform your files btw CSV and Excel formats with built-in data cleaning and visualization Creating this project for Quarter3." )
 
 #file uploader
-uploaded_files=st.file_uploader("upload your files (accepts CSV or Excel):",type=["cvs","xlsx"],accept_multiple_files=(True))
+uploaded_files=st.file_uploader("upload your files (accepts CSV or Excel):",type=["csv","xlsx"],accept_multiple_files=(True))
 
 if uploaded_files:
     for file in uploaded_files:
@@ -42,13 +42,12 @@ if uploaded_files:
         st.dataframe(df.head())
 
      #data cleaning
-st.subheader("Data cleaning operation")
-if st.checkbox(f"Clean data for {file.name}"):
+    st.subheader("Data cleaning operation")
+    if st.checkbox(f"Clean data for {file.name}"):
+        col1,col2=st.columns(2)
 
-    col1,col2=st.columns(2)
-
-    with col1:
-        if st.button(f"Remove duplicates from the file:{file.name}"):
+        with col1:
+         if st.button(f"Remove duplicates from the file:{file.name}"):
             df.drop_duplicates(inplace=True)
             st.write("duplicate removed!")
 
