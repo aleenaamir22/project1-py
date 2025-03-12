@@ -19,7 +19,7 @@ st.markdown(
 )
 
 #title & description 
-st.title("Datasweeper by Aleena Amir")
+st.title("Datasweeper sterling Integrator by Aleena Amir")
 st.write("transform your files btw CSV and Excel formats with built-in data cleaning and visualization Creating this project for Quarter3." )
 
 #file uploader
@@ -47,15 +47,15 @@ if uploaded_files:
         col1,col2=st.columns(2)
 
         with col1:
-            if st.button(f"Remove duplicates from the file:{file.name}"):
-               df.drop_duplicates(inplace=True)
-               st.write("duplicate removed!")
+            if st.button(f"Remove duplicates from the file : {file.name}"):
+              df.drop_duplicates(inplace=True)
+              st.write("duplicate removed!")
 
             with col2:
                 if st.button(f"Fill the missing values{file.name}"):
-                    numeric_cols=df.select_dtypes(include=['number']).columns
-                    df[numeric_cols]=df[numeric_cols].fillna(df[numeric_cols].mean())
-                    st.write(f"missing values has been successfully filled")
+                  numeric_cols=df.select_dtypes(include=['number']).columns
+                  df[numeric_cols]=df[numeric_cols].fillna(df[numeric_cols].mean())
+                  st.write(f"missing values has been successfully filled")
 
         st.subheader("Select columns to keep")
         columns = st.multiselect(f"Choose columns for{file.name}",df.columns,default=df.columns)
