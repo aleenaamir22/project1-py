@@ -11,7 +11,7 @@ st.markdown(
     <style>
     .stApp{
      background-color:gray;
-     color:white;
+     color:black;
      }
      </style>
      """,
@@ -19,7 +19,7 @@ st.markdown(
 )
 
 #title & description 
-st.title("Datasweeper  by Aleena Amir")
+st.title("Growth Mindset:DataFixer Project by Aleena Amir")
 st.write("Transform your files btw CSV and Excel formats with built-in data cleaning and visualization.Creating this project for Quarter3 GIAIC." )
 
 #file uploader
