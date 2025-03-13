@@ -23,15 +23,15 @@ st.title("Datasweeper  by Aleena Amir")
 st.write("transform your files btw CSV and Excel formats with built-in data cleaning and visualization Creating this project for Quarter3." )
 
 #file uploader
-uploaded_files=st.file_uploader("upload your files (accepts CSV or Excel):",type=["cvs","xlsx"],accept_multiple_files=(True))
+uploaded_files=st.file_uploader("upload your files (accepts CSV or Excel):",type=["csv","xlsx"],accept_multiple_files=(True))
 
 if uploaded_files:
     for file in uploaded_files:
-        file_ext=os.path.splitext(file.name)[-1].lower()
+        file_ext= os.path.splitext(file.name)[-1].lower()
 
         if file_ext == ".csv":
             df = pd.read_csv(file)
-        elif file_ext == "xlsx":
+        elif file_ext == ".xlsx":
             df = pd.read_excel(file)
         else:
             st.error(f"unsupported file type:{file_ext}")    
