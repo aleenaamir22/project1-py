@@ -20,10 +20,10 @@ st.markdown(
 
 #title & description 
 st.title("Datasweeper  by Aleena Amir")
-st.write("transform your files btw CSV and Excel formats with built-in data cleaning and visualization Creating this project for Quarter3." )
+st.write("Transform your files btw CSV and Excel formats with built-in data cleaning and visualization.Creating this project for Quarter3 GIAIC." )
 
 #file uploader
-uploaded_files=st.file_uploader("upload your files (accepts CSV or Excel):",type=["cvs","xlsx"],accept_multiple_files=(True))
+uploaded_files=st.file_uploader("upload your files:",type=["cvs","xlsx"],accept_multiple_files=(True))
 
 if uploaded_files:
     for file in uploaded_files:
